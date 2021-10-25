@@ -10,5 +10,53 @@
     "prefix": ["cl", "class"],
     "body": ["className={classNames('$0')}"],
     "description": "Define classes using classnames package"
+  },
+  "React Component": {
+    "scope": "typescriptreact",
+    "prefix": ["rc"],
+    "body": [
+      "import { ReactElement } from 'react';",
+      "",
+      "export interface Props {",
+      "${2}",
+      "}",
+      "",
+      "export default function ${1:Name}(props: Props): ReactElement{",
+      "  const {${3:}} = props;",
+      "",
+      "  return(<>${4:}</>);",
+      "}"
+    ],
+    "description": "Create a Functional React Component with TypeScript."
+  },
+  "NextJS: GetStaticProps": {
+    "scope": "typescriptreact",
+    "prefix": ["gsp"],
+    "body": [
+      "export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {",
+      "${1:}",
+      "  return {",
+      "    props: {",
+      "      ${2:}",
+      "    }",
+      "  };",
+      "};"
+    ],
+    "description": "NextJS: GetStaticProps Function with TypeScript"
+  },
+  "NextJS: GetServerSideProps": {
+    "scope": "typescriptreact",
+    "prefix": ["gssp"],
+    "body": [
+      "export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {",
+      "${1:}",
+      "  return {",
+      "    props: {",
+      "      ${2:}",
+      "    }",
+      "  };",
+      "};"
+    ],
+    "description": "NextJS: GetServerSideProps Function with TypeScript"
   }
 }

@@ -1,7 +1,8 @@
-import { AppProps } from 'next/app';
 import '@/styles/globals.css';
-import lockPageTitle from '@/utils/lockPageTitle';
+
+import { AppProps } from 'next/app';
 import { ScreenProvider } from '@/contexts/screen';
+import lockPageTitle from '@/utils/lockPageTitle';
 
 if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
   const React = require('react');

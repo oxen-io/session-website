@@ -124,6 +124,14 @@ const config = {
         destination: '/api/download/linux',
       },
       {
+        source: '/login',
+        destination: '/api/login',
+      },
+      {
+        source: '/logout',
+        destination: '/api/logout',
+      },
+      {
         source: '/mac',
         destination: '/api/download/mac',
       },

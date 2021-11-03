@@ -1,34 +1,26 @@
 import { ReactElement, useState } from 'react';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
-import Link from 'next/link';
-import classNames from 'classnames';
 
 import { Button } from '@/components/ui';
-import MenuSVG from '@/assets/svgs/hamburger.svg';
-import CloseSVG from '@/assets/svgs/close.svg';
+import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
+import { NAVIGATION } from '@/constants';
+import { NavItem } from '@/components/navigation';
+import classNames from 'classnames';
 
 export default function Nav(): ReactElement {
-  const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleNav = () => {
     setIsExpanded(!isExpanded);
   };
   const mobileNavButtonClasses = 'w-5 h-5 fill-current';
-  const navLinkClasses = classNames(
-    'w-full px-5 py-2 uppercase border-transparent border-b-3',
-    'lg:px-2 lg:w-auto bg-gray-dark lg:bg-transparent',
-    'transition-colors duration-300',
-    'hover:bg-gray-light lg:hover:border-primary lg:hover:text-primary lg:hover:bg-transparent'
-  );
-  const isActiveNavLink = (url: string) => {
-    return url == router.asPath && 'lg:border-primary lg:text-primary';
-  };
   return (
     <nav
+      role="navigation"
       className={classNames(
-        'container relative flex flex-wrap items-center justify-between max-w-6xl px-4 mx-auto z-10',
-        'lg:h-28 lg:px-10'
+        'container relative flex flex-wrap items-center justify-between max-w-6xl px-4 pb-2 mx-auto z-10',
+        'lg:pb-0 lg:h-28 lg:px-10'
       )}
     >
       <div
@@ -57,14 +49,12 @@ export default function Nav(): ReactElement {
                 mobileNavButtonClasses,
                 isExpanded ? 'hidden' : 'block'
               )}
-              title="Menu"
             />
             <CloseSVG
               className={classNames(
                 mobileNavButtonClasses,
                 isExpanded ? 'block' : 'hidden'
               )}
-              title="Close"
             />
           </button>
         </div>
@@ -85,39 +75,16 @@ export default function Nav(): ReactElement {
               : 'h-0 -translate-y-full lg:translate-y-0'
           )}
         >
-          <Link href="/whitepaper">
-            <a className={navLinkClasses} target="_blank">
-              whitepaper
-            </a>
-          </Link>
-          <Link href="https://docs.oxen.io/products-built-on-oxen/session">
-            <a
-              className={navLinkClasses}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              technicals
-            </a>
-          </Link>
-          <Link href="https://github.com/oxen-io">
-            <a
-              className={navLinkClasses}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              github
-            </a>
-          </Link>
-          <Link href="/blog">
-            <a className={classNames(navLinkClasses, isActiveNavLink('/blog'))}>
-              blog
-            </a>
-          </Link>
-          <Link href="/faq">
-            <a className={classNames(navLinkClasses, isActiveNavLink('/faq'))}>
-              faq
-            </a>
-          </Link>
+          {Object.entries(NAVIGATION.NAV_ITEMS).map(([key, value], index) => {
+            return (
+              <NavItem
+                key={`${key}${index}`}
+                navItem={value}
+                title={key}
+                isExpanded={isExpanded}
+              />
+            );
+          })}
           <Link href="/download">
             <a className="hidden lg:inline">
               <Button fontWeight="bold" classes="ml-6">

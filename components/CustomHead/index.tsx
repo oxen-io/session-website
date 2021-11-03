@@ -188,7 +188,11 @@ export default function CustomHead(props: Props): ReactElement {
         name="twitter:site"
         content={METADATA.HOST_URL}
       />
-      <meta key="twitter:creator" name="twitter:creator" content="Oxen_io" />
+      <meta
+        key="twitter:creator"
+        name="twitter:creator"
+        content="session_app"
+      />
       <meta
         key="apple-itunes-app"
         name="apple-itunes-app"

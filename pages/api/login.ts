@@ -13,7 +13,7 @@ export default async function handler(
   res.setPreviewData(
     {},
     {
-      maxAge: CMS.CONTENT_REVALIDATE_RATE * 24 * 7, // The preview mode cookies expire after a week
+      maxAge: 3600 * 24 * 7, // The preview mode cookies expire after a week
     }
   );
   res.redirect('/');

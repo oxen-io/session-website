@@ -1,5 +1,5 @@
 const withPlugins = require('next-compose-plugins');
-const withSvgr = require('next-svgr');
+const withSvgr = require('@newhighsco/next-plugin-svgr');
 
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -122,6 +122,10 @@ const config = {
       {
         source: '/linux',
         destination: '/api/download/linux',
+      },
+      {
+        source: '/lightpaper',
+        destination: '/api/lightpaper',
       },
       {
         source: '/login',

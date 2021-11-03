@@ -1,15 +1,13 @@
-import { ReactElement } from 'react';
+import { ReactComponent as FacebookSVG } from '@/assets/svgs/facebook.svg';
+import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
+import { GroupNotice } from '@/components/sections';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ReactElement } from 'react';
+import { ReactComponent as RssSVG } from '@/assets/svgs/rss.svg';
+import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import classNames from 'classnames';
 import redact from '@/utils/redact';
-
-import FacebookSVG from '@/assets/svgs/facebook.svg';
-import TwitterSVG from '@/assets/svgs/twitter.svg';
-import GithubSVG from '@/assets/svgs/github.svg';
-import RssSVG from '@/assets/svgs/rss.svg';
-
-import { GroupNotice } from '@/components/sections';
 import { useScreen } from '@/contexts/screen';
 
 export default function Footer(): ReactElement {
@@ -155,10 +153,7 @@ export default function Footer(): ReactElement {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FacebookSVG
-                        className={svgClasses}
-                        title="facebook logo"
-                      />
+                      <FacebookSVG className={svgClasses} />
                     </a>
                   </Link>
                   <Link href="https://twitter.com/session_app">
@@ -167,7 +162,7 @@ export default function Footer(): ReactElement {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <TwitterSVG className={svgClasses} title="twitter logo" />
+                      <TwitterSVG className={svgClasses} />
                     </a>
                   </Link>
                   <Link href="https://github.com/oxen-io">
@@ -176,12 +171,12 @@ export default function Footer(): ReactElement {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <GithubSVG className={svgClasses} title="github logo" />
+                      <GithubSVG className={svgClasses} />
                     </a>
                   </Link>
                   <Link href="/feed">
                     <a className={socialLinkClasses} target="_self">
-                      <RssSVG className={svgClasses} title="rss logo" />
+                      <RssSVG className={svgClasses} />
                     </a>
                   </Link>
                 </div>

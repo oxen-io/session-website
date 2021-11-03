@@ -1,4 +1,3 @@
-// TODO how does this work?
 declare module '*.svg' {
   import * as React from 'react';
 

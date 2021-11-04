@@ -8,5 +8,9 @@ export default async function handler(
 ) {
   res.statusCode = 200;
   res.setHeader('content-type', 'application/pdf');
-  res.end(readFileSync('./public/assets/papers/lightpaper-2021-11-03.pdf'));
+  res.end(
+    readFileSync(
+      './public/assets/papers/Lightpaper_Session_private_messenger.pdf'
+    )
+  );
 }

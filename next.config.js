@@ -124,7 +124,7 @@ const config = {
         destination: '/api/download/linux',
       },
       {
-        source: '/lightpaper',
+        source: '/lightpaper/pdf',
         destination: '/api/lightpaper',
       },
       {

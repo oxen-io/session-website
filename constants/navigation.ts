@@ -35,7 +35,7 @@ const NAV_ITEMS: INavList = {
       Lightpaper: {
         href: '/lightpaper',
         alt: 'Link to Session Lightpaper',
-        target: '_blank',
+        target: '_self',
       },
       Whitepaper: {
         href: '/whitepaper',

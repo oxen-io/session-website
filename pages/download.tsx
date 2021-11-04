@@ -1,17 +1,15 @@
+import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
+import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
+import Container from '@/components/Container';
+import Image from 'next/image';
+import { Layout } from '@/components/ui';
+import Link from 'next/link';
+import { ReactComponent as LinuxSVG } from '@/assets/svgs/linux.svg';
+import METADATA from '@/constants/metadata';
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { ReactElement } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { ReactComponent as WindowsSVG } from '@/assets/svgs/windows.svg';
 import classNames from 'classnames';
-
-import { Layout } from '@/components/ui';
-import Container from '@/components/Container';
-
-import AndroidSVG from '@/assets/svgs/android_robot_head.svg';
-import AppleSVG from '@/assets/svgs/apple.svg';
-import LinuxSVG from '@/assets/svgs/linux.svg';
-import WindowsSVG from '@/assets/svgs/windows.svg';
-import METADATA from '@/constants/metadata';
 
 export default function Download(): ReactElement {
   const panelClasses = classNames(
@@ -114,7 +112,6 @@ export default function Download(): ReactElement {
                           'w-6 h-6',
                           'md:w-8 md:h-8'
                         )}
-                        title="Android logo"
                       />
                       <span>Android</span>
                     </a>
@@ -139,7 +136,6 @@ export default function Download(): ReactElement {
                           'w-6 h-6',
                           'md:w-8 md:h-8'
                         )}
-                        title="Android logo"
                       />
                       <span>APK</span>
                     </a>
@@ -159,7 +155,6 @@ export default function Download(): ReactElement {
                           'w-4 h-4',
                           'md:w-6 md:h-6'
                         )}
-                        title="Apple logo"
                       />
                       <span>iPhone</span>
                     </a>
@@ -245,7 +240,6 @@ export default function Download(): ReactElement {
                         'w-4 h-4',
                         'md:w-6 md:h-6'
                       )}
-                      title="Apple logo"
                     />
                     <span>Mac</span>
                   </a>
@@ -269,7 +263,6 @@ export default function Download(): ReactElement {
                         'w-4 h-4',
                         'md:w-6 md:h-6'
                       )}
-                      title="Windows logo"
                     />
                     <span>Windows</span>
                   </a>
@@ -288,7 +281,6 @@ export default function Download(): ReactElement {
                         'w-5 h-5',
                         'md:w-7 md:h-7'
                       )}
-                      title="Linux logo"
                     />
                     <span>Linux</span>
                   </a>

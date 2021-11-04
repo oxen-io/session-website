@@ -1,5 +1,6 @@
 import CMS from './cms';
-import UI from './ui';
 import METADATA from './metadata';
+import NAVIGATION from './navigation';
+import UI from './ui';
 
-export { CMS, UI, METADATA };
+export { CMS, UI, METADATA, NAVIGATION };

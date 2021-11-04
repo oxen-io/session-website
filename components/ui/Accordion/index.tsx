@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { ReactElement, useState, useRef, useEffect } from 'react';
+import { ReactElement, useEffect, useRef, useState } from 'react';
+
 import { Document } from '@contentful/rich-text-types';
-import classNames from 'classnames';
-
-import PlusSVG from '@/assets/svgs/plus.svg';
-import MinusSVG from '@/assets/svgs/minus.svg';
-
+import { ReactComponent as MinusSVG } from '@/assets/svgs/minus.svg';
+import { ReactComponent as PlusSVG } from '@/assets/svgs/plus.svg';
 import RichBody from '@/components/RichBody';
+import classNames from 'classnames';
 
 interface Props {
   id: string;
@@ -61,14 +60,12 @@ export default function Accordion(props: Props): ReactElement {
                 svgClasses,
                 isExpanded ? 'inline' : 'hidden'
               )}
-              title="close"
             />
             <PlusSVG
               className={classNames(
                 svgClasses,
                 isExpanded ? 'hidden' : 'inline'
               )}
-              title="expand"
             />
           </>
         )}

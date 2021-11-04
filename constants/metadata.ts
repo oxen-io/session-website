@@ -83,8 +83,32 @@ const METADATA = {
       ALT: 'Frequently Asked Questions heading with redacted text below',
     },
   },
+  LIGHTPAPER_PAGE: {
+    DESCRIPTION:
+      'Session is a decentralised messenger that supports completely private, secure, and anonymous communications.',
+    OG_IMAGE: {
+      URL: '/assets/images/lightpaper.jpg',
+      WIDTH: 1200,
+      HEIGHT: 627,
+      ALT: 'Black background with a neon white Session logo with Lightpaper written as a heading',
+    },
+    TAGS: [
+      'Session',
+      'lightpaper',
+      'metadata',
+      'messenger',
+      'encryption',
+      'encrypted',
+      'onion routing',
+      'decentralisation',
+      'Oxen',
+      'blockchain',
+      'messaging',
+      'private',
+      'privacy',
+    ],
+  },
   OPEN_GROUP_PAGE: {
-    TYPE: 'article',
     DESCRIPTION:
       'Join the movement to keep the internet private! Chat with like-minded individuals in Sessions Open Group Channel. Join Now',
     OG_IMAGE: {

@@ -1,13 +1,12 @@
-import { ReactElement } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import classNames from 'classnames';
-
+import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
+import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
 import { Button } from '@/components/ui';
 import Container from '@/components/Container';
-import AndroidSVG from '@/assets/svgs/android_robot_head.svg';
-import AppleSVG from '@/assets/svgs/apple.svg';
-import DesktopSVG from '@/assets/svgs/desktop.svg';
+import { ReactComponent as DesktopSVG } from '@/assets/svgs/desktop.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ReactElement } from 'react';
+import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 
 export default function Hero(): ReactElement {
@@ -53,7 +52,6 @@ export default function Hero(): ReactElement {
                 <a className={downloadLinkClasses}>
                   <AndroidSVG
                     className={classNames(downloadSVGClasses, 'w-8 h-8')}
-                    title="Android logo"
                   />
                   <span>Android</span>
                 </a>
@@ -62,7 +60,6 @@ export default function Hero(): ReactElement {
                 <a className={downloadLinkClasses}>
                   <AndroidSVG
                     className={classNames(downloadSVGClasses, 'w-8 h-8')}
-                    title="Android logo"
                   />
                   <span>APK</span>
                 </a>
@@ -71,7 +68,6 @@ export default function Hero(): ReactElement {
                 <a className={downloadLinkClasses}>
                   <AppleSVG
                     className={classNames(downloadSVGClasses, 'w-6 h-6')}
-                    title="Apple logo"
                   />
                   <span>iPhone</span>
                 </a>
@@ -80,7 +76,6 @@ export default function Hero(): ReactElement {
                 <a className={downloadLinkClasses}>
                   <DesktopSVG
                     className={classNames(downloadSVGClasses, 'w-7 h-7')}
-                    title="computer"
                   />
                   <span>Desktop</span>
                 </a>

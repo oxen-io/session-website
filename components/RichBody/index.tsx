@@ -1,15 +1,18 @@
-/* eslint-disable react/display-name */
-import { cloneElement, Children, ReactElement } from 'react';
-import Link from 'next/link';
-import classNames from 'classnames';
-
 import { BLOCKS, Document, INLINES, MARKS } from '@contentful/rich-text-types';
+/* eslint-disable react/display-name */
+import { Children, ReactElement, cloneElement } from 'react';
 import {
-  documentToReactComponents,
   Options,
+  documentToReactComponents,
 } from '@contentful/rich-text-react-renderer';
-import { isLocal, hasLocalID } from '@/utils/links';
+import { hasLocalID, isLocal } from '@/utils/links';
+
+import Link from 'next/link';
+import SHORTCODES from '@/constants/shortcodes';
+import classNames from 'classnames';
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { renderEmbeddedEntry } from '@/services/render';
+import { renderShortcode } from '@/utils/shortcodes';
 
 interface Props {
   body: Document;
@@ -79,7 +82,15 @@ export default function RichBody(props: Props): ReactElement {
             </span>
           );
         }
-        return <p className={classNames('leading-relaxed pb-6')}>{children}</p>;
+        const plaintext = documentToPlainTextString(node);
+        const isShortcode = SHORTCODES.REGEX.test(plaintext);
+        if (isShortcode) {
+          return renderShortcode(plaintext);
+        } else {
+          return (
+            <p className={classNames('leading-relaxed pb-6')}>{children}</p>
+          );
+        }
       },
       [BLOCKS.HEADING_1]: (node, children) => (
         <h1

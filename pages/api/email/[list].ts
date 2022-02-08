@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+
 import base64 from 'base-64';
 
 export default async function handler(
@@ -10,10 +11,16 @@ export default async function handler(
       message: 'Email API: Invalid http method. | Only POST is accepted.',
     });
   }
-
+  const list = `${req.query.list}`;
   const email = req.body.email;
+
+  const listId =
+    list === 'session'
+      ? process.env.CAMPAIGN_MONITOR_LIST_SESSION_ID
+      : process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID;
+
   const response = await fetch(
-    `https://api.createsend.com/api/v3.2/subscribers/${process.env.CAMPAIGN_MONITOR_LIST_API_ID}.json`,
+    `https://api.createsend.com/api/v3.2/subscribers/${listId}.json`,
     {
       body: JSON.stringify({
         EmailAddress: email,

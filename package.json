@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.3.5",
+    "@contentful/rich-text-plain-text-renderer": "^15.3.5",
     "@contentful/rich-text-react-renderer": "^15.3.5",
     "@newhighsco/next-plugin-svgr": "^3.0.28",
     "@silvermine/videojs-quality-selector": "^1.2.5",

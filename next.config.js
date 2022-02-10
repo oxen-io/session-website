@@ -153,7 +153,6 @@ const config = {
       },
     ];
   },
-  target: 'serverless',
 };
 
 module.exports = withPlugins([withSvgr], config);

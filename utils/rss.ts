@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync, writeFile } from 'fs';
 
 import { Feed } from 'feed';
 import { IPost } from '../types/cms';
@@ -43,7 +43,13 @@ export default function generateRSSFeed(posts: IPost[]) {
   });
 
   mkdirSync(`./public/rss`, { recursive: true });
-  writeFileSync(`./public/rss/feed.xml`, feed.rss2());
-  writeFileSync(`./public/rss/feed.json`, feed.json1());
-  writeFileSync(`./public/rss/atom.xml`, feed.atom1());
+  writeFile(`./public/rss/feed.xml`, feed.rss2(), (err) => {
+    console.error(err);
+  });
+  writeFile(`./public/rss/feed.json`, feed.json1(), (err) => {
+    console.error(err);
+  });
+  writeFile(`./public/rss/atom.xml`, feed.atom1(), (err) => {
+    console.error(err);
+  });
 }

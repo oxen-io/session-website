@@ -45,18 +45,24 @@ export default function MarketResearchSignup(): ReactElement {
     >
       <Container
         id="signup"
-        classes={classNames('px-8', 'md:px-10', 'lg:py-24')}
+        classes={classNames('px-8', 'md:px-10', 'lg:py-12')}
       >
         <h3
           className={classNames(
-            'text-xl font-bold leading-none mb-2',
-            'lg:text-3xl lg:mb-0'
+            'text-xl font-bold leading-tight mb-2',
+            'md:text-3xl',
+            'lg:text-4xl lg:mb-4'
           )}
         >
-          Psst. Help us out!
+          Join our new research group!
         </h3>
-        <p className={classNames('leading-none mb-4', 'md:mb-8', 'lg:text-xl')}>
-          Sign up to our market research group and help make Session better.
+        <p className={classNames('mb-4', 'md:mb-8', 'lg:text-xl')}>
+          <span>
+            You can help us make Session the best messenger in the world.{' '}
+          </span>
+          <span className={classNames('md:block')}>
+            Sign up to Session&apos;s market research group now!
+          </span>
         </p>
         <form onSubmit={handleSubscription}>
           <input

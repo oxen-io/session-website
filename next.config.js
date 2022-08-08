@@ -105,11 +105,6 @@ const config = {
         destination: 'https://fdroid.getsession.org/',
         permanent: true,
       },
-      {
-        source: '/whitepaper',
-        destination: 'https://arxiv.org/pdf/2002.04609.pdf',
-        permanent: true,
-      },
     ],
   },
   async redirects() {

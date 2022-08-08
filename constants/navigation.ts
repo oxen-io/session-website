@@ -35,8 +35,7 @@ const NAV_ITEMS: INavList = {
       Whitepaper: {
         href: '/whitepaper',
         alt: 'Link to Session Whitepaper',
-        target: '_blank',
-        rel: 'noopener noreferrer',
+        target: '_self',
       },
       Documentation: {
         href: 'https://docs.oxen.io/products-built-on-oxen/session',

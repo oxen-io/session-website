@@ -60,11 +60,6 @@ const NAV_ITEMS: INavList = {
       },
     },
   },
-  Donate: {
-    href: 'https://donorbox.org/optf-donation',
-    alt: 'Link to donation page',
-    target: '_blank',
-  },
 };
 
 const NAVIGATION = {

@@ -68,7 +68,6 @@ export default function Footer(): ReactElement {
                 'lg:w-1/3'
               )}
             >
-              <h3 className={headingClasses}>About</h3>
               <Link href="/whitepaper">
                 <a
                   className={linkClasses}
@@ -98,23 +97,13 @@ export default function Footer(): ReactElement {
                 'lg:w-1/3'
               )}
             >
-              <h3 className={headingClasses}>Company</h3>
-              <Link href="https://optf.ngo/">
+              <Link href="https://session.foundation">
                 <a
                   className={linkClasses}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  OPTF
-                </a>
-              </Link>
-              <Link href="https://oxen.io/">
-                <a
-                  className={linkClasses}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Oxen
+                  Session Technology Foundation
                 </a>
               </Link>
               <Link href="https://lokinet.org/">
@@ -129,7 +118,7 @@ export default function Footer(): ReactElement {
               <Link href="/assets/downloads/Session-Brandmarks.zip">
                 <a className={linkClasses}>Media Kit</a>
               </Link>
-              <Link href="https://optf.ngo/transparency/">
+              <Link href="https://session.foundation/transparency-reports">
                 <a
                   className={linkClasses}
                   target="_blank"
@@ -147,7 +136,6 @@ export default function Footer(): ReactElement {
               )}
             >
               <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
-                <h3 className={headingClasses}>Links</h3>
                 <div className={classNames('flex flex-wrap -ml-1')}>
                   <Link href="https://twitter.com/session_app">
                     <a
@@ -210,14 +198,13 @@ export default function Footer(): ReactElement {
               <div
                 className={classNames('flex flex-col w-1/2 mb-4', 'lg:w-full')}
               >
-                <h3 className={headingClasses}>Support</h3>
                 <a
                   href="https://sessionapp.zendesk.com/hc/en-us"
                   className={classNames(linkClasses)}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Visit our Help Centre
+                  Session Support
                 </a>
               </div>
             </div>

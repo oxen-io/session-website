@@ -68,6 +68,7 @@ export default function Footer(): ReactElement {
                 'lg:w-1/3'
               )}
             >
+              <h3 className={headingClasses}>About</h3>
               <Link href="/whitepaper">
                 <a
                   className={linkClasses}
@@ -97,6 +98,7 @@ export default function Footer(): ReactElement {
                 'lg:w-1/3'
               )}
             >
+              <h3 className={headingClasses}>Links</h3>
               <Link href="https://session.foundation">
                 <a
                   className={linkClasses}
@@ -136,6 +138,7 @@ export default function Footer(): ReactElement {
               )}
             >
               <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
+                <h3 className={headingClasses}>Socials</h3>
                 <div className={classNames('flex flex-wrap -ml-1')}>
                   <Link href="https://twitter.com/session_app">
                     <a
@@ -198,6 +201,7 @@ export default function Footer(): ReactElement {
               <div
                 className={classNames('flex flex-col w-1/2 mb-4', 'lg:w-full')}
               >
+                <h3 className={headingClasses}>Support</h3>
                 <a
                   href="https://sessionapp.zendesk.com/hc/en-us"
                   className={classNames(linkClasses)}
